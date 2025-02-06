@@ -66,7 +66,7 @@ const TaskForm = () => {
                         value={taskText}
                         onChange={(e) => setTaskText(e.target.value)}
                         sx={{
-                            width: 420,
+                            width: 520,
                             borderRadius: '5px',
                             '& .MuiOutlinedInput-root': {
                                 '& fieldset': {
