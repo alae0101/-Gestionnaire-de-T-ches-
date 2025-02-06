@@ -11,7 +11,8 @@ import { Provider } from 'react-redux';
 import './styles/globalStyles.js';
 import store from './redux/store';
 import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from './ThemeContext'; // Import the ThemeProvider
+import { ThemeProvider } from './ThemeContext';
+import Header from "./components/Header"; // Import the ThemeProvider
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,7 +20,7 @@ root.render(
         <Provider store={store}>
             <ThemeProvider> {/* Wrap with ThemeProvider */}
                 <BrowserRouter>
-
+                    <Header></Header>
                     <App />
                 </BrowserRouter>
             </ThemeProvider>
