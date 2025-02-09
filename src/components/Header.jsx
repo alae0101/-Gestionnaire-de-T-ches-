@@ -85,9 +85,9 @@ const Header = () => {
         <>
         <header className="header" style={{backgroundColor: theme === 'darkMode' ? '#121212' : '#ffffff',
             color: theme === 'darkMode' ? '#ffffff' : '#000000'}} >
-            <h1 className="logo"><Link to={"/"}  style={{textDecoration: "none", color:  theme === 'darkMode' ? '#ffffff' : '#000000'}} >Gestionnaire de Tâches</Link></h1>
+            <h1 className="logo"><Link to={"/Gestionnaire-de-Tches"}  style={{textDecoration: "none", color:  theme === 'darkMode' ? '#ffffff' : '#000000'}} >Gestionnaire de Tâches</Link></h1>
             <div className="button-container">
-                <Link to={"/newtask"} style={{textDecoration: "none", color:  theme === 'darkMode' ? '#ffffff' : '#000000'}}><Button  variant="outlined">Add new Task</Button></Link>
+                <Link to={"Gestionnaire-de-Tches/newtask"} style={{textDecoration: "none", color:  theme === 'darkMode' ? '#ffffff' : '#000000'}}><Button  variant="outlined">Add new Task</Button></Link>
                 <FormControlLabel
                     control={<MaterialUISwitch sx={{ m: 1 }}  />}
                     label="Switch Mode"

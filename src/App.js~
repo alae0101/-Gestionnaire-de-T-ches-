@@ -20,13 +20,13 @@ const App = () => {
               <div className={`center-container ${theme}`} style={{ backgroundColor: theme === 'darkMode' ? '#121212' : '#ffffff' }}>
 
                   <Routes>
-                      <Route  path="/" element={<div className={"App"}>
+                      <Route  path="/Gestionnaire-de-Tches" element={<div className={"App"}>
 
                           {/*<TaskForm />*/}
                           <FilterTasks/>
                           <TaskTable/>
                       </div>}/>
-                      <Route path="/newtask" element={<TaskForm/>}/>
+                      <Route path="Gestionnaire-de-Tches/newtask" element={<TaskForm/>}/>
                   </Routes>
               </div>
           </div>
