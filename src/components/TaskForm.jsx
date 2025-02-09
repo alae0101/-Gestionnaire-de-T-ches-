@@ -92,7 +92,9 @@ const TaskForm = () => {
 
             <Button
                 variant="outlined"
-                onClick={handleSubmit}
+                onClick
+
+                    ={handleSubmit}
                 sx={{
                     borderColor: theme === 'darkMode' ? '#ffffff' : '#000000',
                     color: theme === 'darkMode' ? '#ffffff' : '#000000',

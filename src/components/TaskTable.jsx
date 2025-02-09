@@ -169,13 +169,16 @@ export default function TaskTable() {
                         {filteredTasks.filter((e) => e.include ).slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((task) => (
                             <TableRow hover role="checkbox" key={task.id}>
                                 <TableCell sx={{ color: theme === 'darkMode' ? '#ffffff' : '#000000' }}>
-                                    {task.editing === false ?<ListItem sx={{"&::before":{borderBottomColor:theme === 'darkMode' ? '#ffffff' : '#000000'},}} key={task.id} secondaryAction={
+                                    {task.editing === false ?
+
+                                        <ListItem sx={{"&::before":{borderBottomColor:theme === 'darkMode' ? '#ffffff' : '#000000'},}} key={task.id} secondaryAction={
                                         <div>
 
-                                            <IconButton edge="end" aria-label="delete"
-                                                        >
-                                                <EditIcon sx={{color: theme === 'darkMode' ? '#ffffff' : '#000000'}} onClick={() =>  dispatch(toggleEdit(task.id)) }/>
-                                            </IconButton>
+                                            {task.completed ? '' :<IconButton edge="end" aria-label="delete"
+                                            >
+                                                <EditIcon sx={{color: theme === 'darkMode' ? '#ffffff' : '#000000'}}
+                                                          onClick={() => dispatch(toggleEdit(task.id))}/>
+                                            </IconButton>}
                                             <IconButton sx={{marginLeft: 1}} edge="end" aria-label="delete"
                                                         onClick={() => dispatch(deleteTask(task.id))}>
                                                 <DeleteIcon sx={{color: theme === 'darkMode' ? '#ffffff' : '#000000'}}/>
@@ -200,6 +203,7 @@ export default function TaskTable() {
                                                 marginLeft: -3,
                                                 marginRight: 4,
                                                 color: theme === 'darkMode' ? '#ffffff' : '#000000'
+                                                ,textDecoration: task.completed ? 'line-through' : 'none'
                                             }}/>
                                         </ListItemButton>
                                     </ListItem>:
